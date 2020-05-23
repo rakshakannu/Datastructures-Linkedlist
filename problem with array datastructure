@@ -1,0 +1,5 @@
+// problems with arrays:
+1. size is fixed and pre-allocated
+2. insertion in the middle or beginning is costly
+3. deletion in the middle or beginning is costly
+4. implementation of data structures like queue and dequeue is complex with arrays
