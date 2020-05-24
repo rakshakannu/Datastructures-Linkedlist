@@ -1,0 +1,48 @@
+// structure of linkedlist in java
+// we have only head reference in linkedlist
+// NULL pointer exceptions is a very common mistake when people program for linkedlists.
+
+class node{
+  int data;
+  node next; // in java next is always initialised as null
+  node(int d){ data = d; }
+};
+
+class list{
+  node head;
+  void insertbegin(int x){
+    node temp = new node(x);
+    temp.next = head;
+    head = temp;
+    }
+}
+
+void printlist(){
+  node curr = head;
+  (while curr!=NULL)
+  {
+    System.out.println(curr.data);
+    curr = curr.next;
+  }
+}
+
+void insertend(int x){
+  node temp = new node(x);
+  if(head==null){ // if linkedlist is empty, we need to set head as node to be inserted.
+    head = temp;
+    return;
+  }
+  node curre = head;
+  while(curr.next !=null)
+    curr = curr.next;
+  curr.next = temp;
+
+public class test{
+  public static void main(strings[] args)
+  {
+    List l = new List();
+    l.insertbegin(5);
+    l.insertbegin(10);
+    l.printlist();
+  }
+}
