@@ -1,1 +1,19 @@
 // a node points to the next node as well as the previous node
+
+class node{
+  int data;
+  node next;
+  node prev;
+  node(int d){
+    data = d;
+  }
+}
+
+// Advantages over sinlgy linked list
+1. traverse in both the directions.
+2. we can delete a given node in o[1] time.
+3. we can insert/delete a node BEFORE A GIVEN NODE in O[1] time.
+
+// Disadvantages
+1. space required for extra pointer with every node.
+2. the code becomes complex as extra pointer has to be maintained everywhere.
