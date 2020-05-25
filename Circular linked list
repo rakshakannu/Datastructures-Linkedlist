@@ -1,0 +1,10 @@
+// advantages
+1. can traverse the whole list from any node.
+2. we can insert an item at the beginning as well as end in O[1] time by maintaining just one pointer.
+( useful for queue implementation )
+implementing algorithms like round robin.
+
+// disadvantages
+1. codes for traversal, insertion, deletion etcb become slightly complex
+
+// can be a singly or doubly circular linked list
