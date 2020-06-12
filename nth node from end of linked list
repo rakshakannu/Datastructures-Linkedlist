@@ -1,1 +1,44 @@
+// method - 1
+// using length of linked list
 
+void printNthFromEnd( node head )
+{
+  int len =0;
+  for(node = head; curr!=null;curr=curr.next)
+    len++;
+  if(len<n)
+    return;
+  node curr = head;
+  for(int i=0;i<len-n+1;i++)
+    curr = curr.next;
+  System.out.print(curr.data);
+}
+
+// method -2
+// no length, using two pointer method
+// keep first pointer at the place asked in the q say n=2.
+// keep the second pointer at the first node, n=0.
+// now when the first pointer reaches null, second will reach the required position.
+
+void printNthFromEnd(node head, int n)
+{
+  if(head==null)
+    return;
+  node first = head;
+  
+  for(int i=0;i<n;i++)
+  {
+    if(first== null)
+      return;
+    first = first.next; 
+  }
+  
+  node second = head;
+  while(first!=null)
+  {
+    second = second.next;
+    first = first.next;
+  }
+  
+  System.out.print(second.data);
+}
