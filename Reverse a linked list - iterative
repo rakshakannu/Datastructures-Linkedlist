@@ -1,0 +1,45 @@
+// naive solution
+// null is small in java, capital in c++
+// use an auxiliary array to copy elements into it, and reversly copy it back into linked list
+// use arraylist in java
+// two traversal, O[n] space
+
+node revList( node head )
+{
+  ArrayList<integer> arr = new Arraylist<integer>();
+  
+  for(node curr=head; curr!=null; curr = curr.next)
+  {
+    arr.add(curr.data); // add elements to it from linkedlist
+  }
+  
+  for( node curr=head; curr!=null; curr= curr.next)
+  {
+    curr.data= arr.remove(arr.size()-1);
+  return head;
+  }
+}
+
+// better solution
+// change the links between nodes
+
+// next = curr.next
+// curr.next = rev
+// rev = curr
+// curr = next
+
+// time - O[1], space - O[1]
+
+node reverse(node head)
+{
+  node curr = head;
+  node prev = null;
+  while(curr!=null)
+  {
+    node next = curr.next;
+    curr.next = prev;
+    prev=curr;
+    curr=next;
+  }
+  return prev; // prev is the new head
+}
