@@ -1,0 +1,20 @@
+// method 1
+// recursive - 1
+
+node recRevL(node head)
+{
+
+  //base cases
+  if(head==null || head.next==null)
+    return head;
+
+    
+  node rest_head = recRevL(head.next)
+  node rest_tail =.head.next;
+  rest_tail.next = head;
+  head.next = null;
+  return rest_head;
+}
+
+// mehtod 2
+
