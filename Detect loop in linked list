@@ -1,0 +1,54 @@
+// given a singly linked list
+// the loop will be such that lastnode.next!=null instead it will be connected to any one of the previous nodes.
+
+// method 1
+// naive solution
+// O[n square]
+
+// method 2
+// better solution
+// O[n]
+// If modification to linked list structure  is allowed 
+// checking if the nodes are alreadu visited or not throughout the end of the linked list
+
+struct node{
+  int data;
+  node *next;
+  bool visited;
+  node(int d)
+  {
+    data=d;
+    next=null;
+    visited=false;
+  }
+  
+}
+
+// method 3
+// does not modify structure of linkedlist
+// time = O[n]
+// changes reference of linked list nodes
+// create a temp node which is a dummy node and change the next of every node to this dummy node.
+// if it repeats for a particular node, that means there is a loop
+// drawback - destroys linkedlist
+
+bool isLoop( node head)
+{
+  node temp;
+  node curr = head;
+  while(curr!=null)
+  {
+    if(curr.next == null)
+      return false;
+    if(curr.next== temp)
+      return true;
+    
+    curr.next=temp;
+    curr = curr.next;
+  }
+  return false;
+}
+
+// method 4
+// using hash
+// time - O[1]
