@@ -1,0 +1,6 @@
+// given a singly linked list and size K.
+// if less than K nodes are left, reverse the remaining.
+
+// recursive solution
+// time - O[n], space - n/k when n = length of linkedlist
+
