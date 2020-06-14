@@ -1,0 +1,30 @@
+// very famous algorithm
+// time = O[n], no extra space
+// intialise slow_p = head and fast_p = head
+// move slow by one and fast by two places, if these two meet at any point, there is a loop
+
+bool isLoop(node head)
+{
+  node slow_p = head;
+  node fast_p = head;
+  while(fast_p!=null and fast_p.next!=null)
+  {
+    slow_p=slow_p.next;
+    fast_p=fast_p.next.next;
+    
+    if(slow_p == fast_p) // this condition should be put after moving the pointers because otherwise for linked list with 2 nodes, it will
+      return true;          return true.
+  }
+  return false;
+}
+
+-> POINTS TO REMEMBER
+
+1. fast_p will always enter into the loop before (or at the same time) as slow_p
+2. let fast_p e k distance ahead of slow_p when slow_p enters the loop
+3. the distance keeps increasing by one in every movement of both pointers
+4. when the distance becomes length of cycle, they meet.
+
+why only twice?
+
+when you want to reach n surely, then if you increment the distance between the two pointers by one, then only they will surely meet.
