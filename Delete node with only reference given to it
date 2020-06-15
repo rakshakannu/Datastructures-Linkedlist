@@ -1,0 +1,12 @@
+// assume they will never tell you to delete last node
+// this is a trick interview question
+
+trick - copy the data of the next node into the given node and delete the next node
+
+void deleteNode(node ptr)
+{
+  ptr.data = ptr.next.data;
+  ptr.next = ptr.next.next;
+}
+
+this wont work for deleting the last node of linkedlist. It will result in null pointer exception in java. 
