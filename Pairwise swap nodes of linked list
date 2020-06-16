@@ -1,0 +1,20 @@
+// method 1
+// directly swap data
+// problem with this is requires swapping of data
+//time O[n], space -O[1]
+
+void pairwiseSwap(node head)
+{
+  node curr=head;
+  while(curr!=null & curr.next!=null)
+  {
+    swap(curr.data, curr.next.data)
+    curr = curr.next.next;  // moving ahead twp spaces
+  }
+}
+
+// method 2
+// changing reference of nodes
+// first nodes have to be handled carefully
+
+( tricky solution, refer video )
