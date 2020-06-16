@@ -1,0 +1,5 @@
+// given a linked list, where every node has two pointers. one pointer points to next node and next pointer points to a random node in the 
+linked list. we need to clone this linked list.
+
+// method 1
+// using hash map
