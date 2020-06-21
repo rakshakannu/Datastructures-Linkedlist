@@ -2,6 +2,7 @@
 // time = O[n], no extra space
 // intialise slow_p = head and fast_p = head
 // move slow by one and fast by two places, if these two meet at any point, there is a loop
+// also called tortoise and hare algorithm
 
 bool isLoop(node head)
 {
