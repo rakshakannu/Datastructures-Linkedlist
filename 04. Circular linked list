@@ -5,6 +5,6 @@
 implementing algorithms like round robin.
 
 // disadvantages
-1. codes for traversal, insertion, deletion etcb become slightly complex
+1. codes for traversal, insertion, deletion etc become slightly complex
 
 // can be a singly or doubly circular linked list
