@@ -28,7 +28,7 @@ void printiddle(node head)
   if(head==null)
     return;
   node slow=head, fast = head;
-  while(fast!=null && fast,next!=null)
+  while(fast!=null && fast.next!=null)
   {
     slow=slow.next; // crossing one node at a time
     fast = fast.next.next; // crossing two nodes at a time
