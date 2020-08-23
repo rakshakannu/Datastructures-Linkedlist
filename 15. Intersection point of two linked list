@@ -1,2 +1,20 @@
 // given two linkedlists, they have some common nodes which starts from an intersection point, we need to find the intersection  point.
 
+// method 1
+1. create an empty hashset.
+2. traverse the first list and put all elements into it.
+3. traverse the second node and look for every node in hashset. as soon as we find a node, return that node.
+
+time: O(m+n)
+space: O(m)
+
+// method 2
+time: O(m+n)
+space: O(1)
+
+1. traverse both lists and count the nodes in it. let them be c1 and c2.
+2. find abs(c1-c2) = d
+3. traverse the bigger list d times.
+4. now traverse both the list simultaneously till we find a common node.
+
+
