@@ -3,7 +3,7 @@
 // method 1
 1. create an empty hashset.
 2. traverse the first list and put all elements into it.
-3. traverse the second node and look for every node in hashset. as soon as we find a node, return that node.
+3. traverse the second linked list and look for every node in hashset. as soon as we find a node, return that node.
 
 time: O(m+n)
 space: O(m)
